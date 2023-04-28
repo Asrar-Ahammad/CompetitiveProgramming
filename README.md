@@ -1,2 +1,2 @@
 # CompetitiveProgramming
-This is a repo where I showcase all of my Leetcode, GFG problems.
+This repository serves as a platform for the display of the Leetcode and GFG problems that I have solved. Through my engagement with these platforms, I have acquired a wealth of knowledge on programming and its various problem-solving methodologies. This has been instrumental in my personal growth, as it has enabled me to remain active and continually enhance my programming skills.
