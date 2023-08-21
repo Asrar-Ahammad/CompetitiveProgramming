@@ -103,3 +103,59 @@
 #         for i in count:
 #             sum = sum + count[i]
 #         return sum
+
+## Set matrix zero
+# def setZeroes(matrix) -> None:
+#     zeros = {}
+
+#     m = len(matrix)
+#     n = len(matrix[0])
+#     i,j = 0,0
+#     while(i<m):
+#         while(j<n):
+#             if(matrix[i][j] == 0):
+#                 if i not in zeros:
+#                     zeros[i]= [j]
+#                 else:
+#                     zeros[i].append(j)
+#             j+=1
+#         i+=1
+        
+#     print(zeros)
+#     for a in zeros:
+#         for b in zeros[a]:
+#             matrix
+
+def setZeroes(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    first_row_has_zero = any(matrix[0][j] == 0 for j in range(cols))
+    first_col_has_zero = any(matrix[i][0] == 0 for i in range(rows))
+
+    # Mark rows and columns to be zeroed out in the first row and first column
+    for i in range(1, rows):
+        for j in range(1, cols):
+            if matrix[i][j] == 0:
+                matrix[i][0] = 0
+                matrix[0][j] = 0
+
+    # Zero out the necessary rows and columns based on the first row and first column
+    for i in range(1, rows):
+        for j in range(1, cols):
+            if matrix[i][0] == 0 or matrix[0][j] == 0:
+                matrix[i][j] = 0
+
+    # Zero out the first row and first column if needed
+    if first_row_has_zero:
+        for j in range(cols):
+            matrix[0][j] = 0
+
+    if first_col_has_zero:
+        for i in range(rows):
+            matrix[i][0] = 0
+
+    print(matrix)
+
+
+matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+setZeroes(matrix)
