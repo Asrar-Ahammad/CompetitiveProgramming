@@ -9,4 +9,5 @@ def areaSwitchCase(ch: int, a):
     elif ch == 2:
         return "{0:.5f}".format(a[0] * a[1])
 
-print(areaSwitchCase(1,[12]))
+
+print(areaSwitchCase(1, [12]))
