@@ -31,7 +31,7 @@
 #   vowels =list('aeiouAEIOU')
 #   L = list(S)
 #   n = len(S)
-  
+
 #   for i in range(n):
 #     if L[i] in vowels and L[i+1] in vowels and L[i+2] in vowels:
 #       L[i]='*'
@@ -39,7 +39,7 @@
 #       L[i+2]='*'
 #     i+=1
 #     return (''.join(L).replace('***','_'))
-            
+
 # S = 'aaahellooo'
 # print(replaceV(S))
 
@@ -120,42 +120,53 @@
 #                     zeros[i].append(j)
 #             j+=1
 #         i+=1
-        
+
 #     print(zeros)
 #     for a in zeros:
 #         for b in zeros[a]:
 #             matrix
 
-def setZeroes(matrix):
-    rows = len(matrix)
-    cols = len(matrix[0])
-    first_row_has_zero = any(matrix[0][j] == 0 for j in range(cols))
-    first_col_has_zero = any(matrix[i][0] == 0 for i in range(rows))
+# def setZeroes(matrix):
+#     rows = len(matrix)
+#     cols = len(matrix[0])
+#     first_row_has_zero = any(matrix[0][j] == 0 for j in range(cols))
+#     first_col_has_zero = any(matrix[i][0] == 0 for i in range(rows))
+#
+#     # Mark rows and columns to be zeroed out in the first row and first column
+#     for i in range(1, rows):
+#         for j in range(1, cols):
+#             if matrix[i][j] == 0:
+#                 matrix[i][0] = 0
+#                 matrix[0][j] = 0
+#
+#     # Zero out the necessary rows and columns based on the first row and first column
+#     for i in range(1, rows):
+#         for j in range(1, cols):
+#             if matrix[i][0] == 0 or matrix[0][j] == 0:
+#                 matrix[i][j] = 0
+#
+#     # Zero out the first row and first column if needed
+#     if first_row_has_zero:
+#         for j in range(cols):
+#             matrix[0][j] = 0
+#
+#     if first_col_has_zero:
+#         for i in range(rows):
+#             matrix[i][0] = 0
+#
+#     print(matrix)
+#
+#
+# matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+# setZeroes(matrix)
 
-    # Mark rows and columns to be zeroed out in the first row and first column
-    for i in range(1, rows):
-        for j in range(1, cols):
-            if matrix[i][j] == 0:
-                matrix[i][0] = 0
-                matrix[0][j] = 0
-
-    # Zero out the necessary rows and columns based on the first row and first column
-    for i in range(1, rows):
-        for j in range(1, cols):
-            if matrix[i][0] == 0 or matrix[0][j] == 0:
-                matrix[i][j] = 0
-
-    # Zero out the first row and first column if needed
-    if first_row_has_zero:
-        for j in range(cols):
-            matrix[0][j] = 0
-
-    if first_col_has_zero:
-        for i in range(rows):
-            matrix[i][0] = 0
-
-    print(matrix)
+def sample_fun(l):
+    # l.append('a') # This changes the value of the list
+    l = ['b']  # This don't change the value of the list
+    return l
 
 
-matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
-setZeroes(matrix)
+my_list = ['z']
+print("Before : ", my_list)
+sample_fun(my_list)
+print("After : ", my_list)
