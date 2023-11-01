@@ -1,17 +1,10 @@
-def reverse_integer(x: int) -> int:
-    x = str(x)
-    if '-' in x:
-        x = x[1:len(x)]
-        x = x[::-1]
-        x = int(x)
-        x = str(x)
-        x = '-'+x
-    else:
-        x = x[:len(x)]
-        x = x[::-1]
-        x = int(x)
-        x = str(x)
-    return int(x)
+def reverse_integer(x):
+    rev_num = 0
+    while (x > 0):
+        ld = x % 10
+        rev_num = int((rev_num * 10) + ld)
+        x = x // 10
+    return rev_num
 
 
-print(reverse_integer(120))
+print(reverse_integer(-1234))
