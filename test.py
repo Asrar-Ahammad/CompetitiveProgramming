@@ -160,13 +160,23 @@
 # matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
 # setZeroes(matrix)
 
-def sample_fun(l):
-    # l.append('a') # This changes the value of the list
-    l = ['b']  # This don't change the value of the list
-    return l
+# def sample_fun(l):
+#     # l.append('a') # This changes the value of the list
+#     l = ['b']  # This don't change the value of the list
+#     return l
+#
+#
+# my_list = ['z']
+# print("Before : ", my_list)
+# sample_fun(my_list)
+# print("After : ", my_list)
 
+a = None
+x = b'hello'
+print(type(x))
 
-my_list = ['z']
-print("Before : ", my_list)
-sample_fun(my_list)
-print("After : ", my_list)
+print(type(a))
+
+import random
+
+print(random.randrange(1, 10))
